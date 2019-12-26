@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<title>EDW Wiki</title>
+	<link href="img/favicon.png" rel="icon">
+	<link href="css/bootstrap.min.css" id="theme_link" rel="stylesheet">
+	<link href="css/navbar-fixed-right.min.css" rel="stylesheet">
+	<link href="css/navbar-fixed-left.min.css" rel="stylesheet">
+	<script src="js/jquery-3.4.1.slim.min.js">
+	</script>
+	<script src="js/bootstrap.min.js">
+	</script>
+	<script src="js/main.js">
+	</script>
+	<script async defer src="js/buttons.js">
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+		<img height="90px" src="img/logo.png">
+		<a class="navbar-brand" href="index.html">EDW Wiki</a> <button aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarsExampleDefault" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="license.html">License</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="programming_style.html">Programming style</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="database.html">Database</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="networking.html">Networking</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="authentication.html">Authentication</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="configurations.html">Configurations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="game_menu.html">Game menu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="spawning.html">Spawning</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="movement.html">Movement</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="installation.html">Installation</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="jumbotron">
+			<h4>Database:</h4>
+			<p>All server related data should be saved in MySQL tables.<br>
+			As said before, MySQL is one of the best solutions for saving and managing data.<br>
+			Using another type of file storage like XML or json files will make a lot harder to alternate data in the future.<br>
+			Just keep in mind that static data, like items, skills or NPCs, should be loaded at the start of the server once.</p>
+			<p><h5><br>Known EDW bad practice:</h5>
+			For simplicity reasons character ids are not used as keys in the database.<br>
+			We use the player name to link information to specific player.<br>
+			Object ids change each time the player enters the game or an id is requested.<br>
+			Also since we do not constantly run queries, there is no actual performance downside.</p>
+			<p><h5><br>Player deletions:</h5>
+			A player is never deleted, his name and related references are renamed to old name + unix timestamp.<br>
+			This enables us to undelete the character at any given later time.<br>
+			Also the space required for player data is very small considering the current hard drive space capacities.</p>
+			<p><h5><br>"Since unique ids are represented by a long value do not worry for running out of ids."</h5></p>
+		</div>
+	</div>
+</body>
+</html>

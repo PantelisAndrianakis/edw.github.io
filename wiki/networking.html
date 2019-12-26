@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<title>EDW Wiki</title>
+	<link href="img/favicon.png" rel="icon">
+	<link href="css/bootstrap.min.css" id="theme_link" rel="stylesheet">
+	<link href="css/navbar-fixed-right.min.css" rel="stylesheet">
+	<link href="css/navbar-fixed-left.min.css" rel="stylesheet">
+	<script src="js/jquery-3.4.1.slim.min.js">
+	</script>
+	<script src="js/bootstrap.min.js">
+	</script>
+	<script src="js/main.js">
+	</script>
+	<script async defer src="js/buttons.js">
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+		<img height="90px" src="img/logo.png">
+		<a class="navbar-brand" href="index.html">EDW Wiki</a> <button aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarsExampleDefault" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="license.html">License</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="programming_style.html">Programming style</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="database.html">Database</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="networking.html">Networking</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="authentication.html">Authentication</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="configurations.html">Configurations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="game_menu.html">Game menu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="spawning.html">Spawning</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="movement.html">Movement</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="installation.html">Installation</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="jumbotron">
+			<h4>Networking:</h4>
+			<p>We use sockets for networking.<br>
+			All the data are sent or recieved as byte arrays (packets) via TCP.<br>
+			Each client is managed asynchronously by a different server task.<br>
+			We follow the [client request -> server verify -> broadcast] logic.</p>
+			<p><h5><br>Packet encryption:</h5>
+			To minimize packet manipulation via exploits the packet information is encrypted.<br>
+			A simple implementation is already shared on how to use AES to encrypt packet data.<br>
+			Tho it can be improved I will not extend much on this.<br>
+			An open source security system is not that much of a security measure.</p>
+			<p><h5><br>No UDP support:</h5>
+			There are many controversial conversations on the internet about this.<br>
+			Most commercial MMORPGs go with this option, so it will do fine for this project.</p>
+			<p><h5><br>Packet management:</h5>
+			On both server and client there is a packet manager class.<br>
+			First it reads the packet byte size and secondly it decrypts the data.<br>
+			After that it reads the packet id and calls the equilavent recievable implementation with that data.<br>
+			We use two bytes for both packet size value and packet ids. This ensures we can use up to 32767 of packet data and individual ids.</p>
+			<p><h5><br>World regions:</h5>
+			The world area is separated in a 2d region grid.<br>
+			This vastly limits the information broadcasted to nearby players and makes possible the simultaneous coexistence of hundreds if not thousands of players.<br>
+			The regions are predefined at WorldManager class by calculating the World.ini configurations and a fixed visibility range.</p>
+		</div>
+	</div>
+</body>
+</html>

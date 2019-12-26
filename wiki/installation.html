@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<title>EDW Wiki</title>
+	<link href="img/favicon.png" rel="icon">
+	<link href="css/bootstrap.min.css" id="theme_link" rel="stylesheet">
+	<link href="css/navbar-fixed-right.min.css" rel="stylesheet">
+	<link href="css/navbar-fixed-left.min.css" rel="stylesheet">
+	<script src="js/jquery-3.4.1.slim.min.js">
+	</script>
+	<script src="js/bootstrap.min.js">
+	</script>
+	<script src="js/main.js">
+	</script>
+	<script async defer src="js/buttons.js">
+	</script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+		<img height="90px" src="img/logo.png">
+		<a class="navbar-brand" href="index.html">EDW Wiki</a> <button aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarsExampleDefault" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="license.html">License</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="programming_style.html">Programming style</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="database.html">Database</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="networking.html">Networking</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="authentication.html">Authentication</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="configurations.html">Configurations</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="game_menu.html">Game menu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="spawning.html">Spawning</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="movement.html">Movement</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="installation.html">Installation</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="jumbotron">
+			<h4>Installation:</h4>
+			<p>Brief guide on how to setup the project.</p>
+			<p><h5><br>Software you will need:</h5>
+			-Xampp for running MySQL database as a service.<br>
+			-HeidiSQL for executing the database installation SQL queries.<br>
+			-Visual Studio with .Net Core and Unity support.<br>
+			-Unity 3D.</p>
+			<p><h5><br>Server installation:</h5>
+			1. Make sure you have installed Visual Studio with .Net Core.<br>
+			2. Make sure you have installed XAMPP and MySQL service is running.<br>
+			3. Download server project files from GitHub and extract them to a folder.<br>
+			4. Create the edws database and populate it with the SQL files found at Dist\SQL
+			using HeidiSQL or any software of your choice.<br>
+			5. At Dist\Config\Account.ini set AccountAutoCreate value to True.<br>
+			6. Open EpicDragonWorldServer.sln and press F5 to run the server.</p>
+			<p><h5><br>Client installation:</h5>
+			1. Make sure you have installed Unity.<br>
+			2. Download client project files from GitHub and extract them to a folder.<br>
+			3. Download all asset archives mentioned at GitHub readme file.<br>
+			4. Extract all asset archives into Assets folder.<br>
+			5. Run Unity and wait until all components are build.<br>
+			6. You can now run the client and login.</p>
+		</div>
+	</div>
+</body>
+</html>
