@@ -63,16 +63,18 @@
 			Last, if there's a completely new component, anything that is reasonably broadly accepted is fine.</p>
 			<p>1. We use <a href="https://en.wikipedia.org/wiki/Indentation_style#Allman_style">Allman style</a> braces, where each brace begins on a new line. Single line statement block must be enclosed in braces.<br>
 			2. We use the default Visual Studio four spaces indentation.<br>
-			3. We use lowerCamelCase with no underscores (_) for private fields and use readonly where possible. Static read only field names are writen in capital letters and can use underscores.<br>
-			4. We use UperCamelCase with no underscores (_) for naming methods.<br>
-			5. Avoid more than one empty line at any time. For example, do not have two blank lines between members of a type.<br>
-			6. Avoid spurious free spaces. For example avoid if (someVar == 0)..., where the dots mark the spurious free spaces.<br>
-			7. We use language keywords instead of BCL types (i.e. int, string, float instead of Int32, String, Single, etc) for both type references as well as method calls (i.e. int.Parse instead of Int32.Parse).<br>
-			8. The use of var modifier is prohibited in general, to achive (a) not hiding variable types (i.e. var stream = OpenStandardInput()) and (b) understandable code with a fast look.<br>
-			9. For almost the same reasons with (7) the use of const modifier, region tags and namespaces is prohibited.<br>
-			10. Avoid the use of constants, methods, interfaces for code that is not used more than once.<br>
-			11. Use switch when there are three or more cases to compare, otherwise use if.<br>
-			12. Add author and date comment for the classes you create. Add your name to an existing class only after doing significant changes. For more that 70% content changes remove previous author(s).</p>
+			3. We use _lowerCamelCase starting with underscore (_) for class private fields, use readonly where possible.<br>
+			4. We use lowerCamelCase with no underscores (_) for method parameters and variables.<br>
+			5. Static read only field names are writen in capital letters and can use underscores.<br>
+			6. We use UperCamelCase with no underscores (_) for naming methods.<br>
+			7. Avoid more than one empty line at any time. For example, do not have two blank lines between members of a type.<br>
+			8. Avoid spurious free spaces. For example avoid if (someVar == 0)..., where the dots mark the spurious free spaces.<br>
+			9. We use language keywords instead of BCL types (i.e. int, string, float instead of Int32, String, Single, etc) for both type references as well as method calls (i.e. int.Parse instead of Int32.Parse).<br>
+			10. The use of var modifier is prohibited in general, to achive (a) not hiding variable types (i.e. var stream = OpenStandardInput()) and (b) understandable code with a fast look.<br>
+			11. For almost the same reasons with (7) the use of const modifier, region tags and namespaces is prohibited.<br>
+			12. Avoid the use of constants, methods, interfaces for code that is not used more than once.<br>
+			13. Use switch when there are three or more cases to compare, otherwise use if.<br>
+			14. Add author and date comment for the classes you create. Add your name to an existing class only after doing significant changes. For more that 70% content changes remove previous author(s).</p>
 			<p><h5>"Using the same programming style benefits the project by having better readability and ease to review older code."</h5></p>
 		</div>
 	</div>
